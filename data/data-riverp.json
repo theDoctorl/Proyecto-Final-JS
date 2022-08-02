@@ -1,0 +1,6 @@
+[
+    {"id": 1, "idImagen":4, "nombre": "Camiseta retro River Plate. Temporada `00", "precio": 7000, "img": "../Multimedia/CamisetasRiver/river-75.webp", "img2": "../Multimedia/CamisetasRiver/Alonso-75.webp"},
+    {"id": 2, "idImagen":5, "nombre": "Camiseta retro River Plate. Temporada `03", "precio": 4500, "img": "../Multimedia/CamisetasRiver/river-86.webp", "img2": "../Multimedia/CamisetasRiver/JGFunes-86.webp"},
+    {"id": 3, "idImagen":6, "nombre": "Camiseta retro River Plate. Temporada `92", "precio": 6300, "img": "../Multimedia/CamisetasRiver/river-84.webp", "img2": "../Multimedia/CamisetasRiver/JGFunes-84.webp"}
+
+]

@@ -1,0 +1,8 @@
+[
+    {"id": 1, "idImagen":8, "nombre": "Camiseta retro Alemania. Temporada `90", "precio": 7000, "img": "../Multimedia/CamisetasEuropa/Alemania-90.webp", "img2": "../Multimedia/CamisetasEuropa/matthaus-90.webp"},
+    {"id": 2, "idImagen":9, "nombre": "Camiseta retro Holanda. Temporada `88", "precio": 4500, "img": "../Multimedia/CamisetasEuropa/holanda-88.webp", "img2": "../Multimedia/CamisetasEuropa/Gullit-88.webp"},
+    {"id": 3, "idImagen":10, "nombre": "Camiseta retro Italia. Temporada `02", "precio": 6300, "img": "../Multimedia/CamisetasEuropa/italia-02.webp", "img2": "../Multimedia/CamisetasEuropa/Buffon-02+.webp"},
+    {"id": 5, "idImagen":11, "nombre": "Camiseta retro Protugal. Temporada `66", "precio": 9000, "img": "../Multimedia/CamisetasEuropa/portugal-66.webp", "img2": "../Multimedia/CamisetasEuropa/Eusebio-66.webp"},
+    {"id": 6, "idImagen":12, "nombre": "Camiseta retro Inter Milan. Temporada `98", "precio": 9000, "img": "../Multimedia/CamisetasEuropa/InterMilan-98.webp", "img2": "../Multimedia/CamisetasEuropa/Ronaldo-98.webp"},
+    {"id": 7, "idImagen":13, "nombre": "Camiseta retro Real Madrid. Temporada `03", "precio": 9000, "img": "../Multimedia/CamisetasEuropa/RealMadrid-03.webp", "img2": "../Multimedia/CamisetasEuropa/Zidane-03.webp"}
+]

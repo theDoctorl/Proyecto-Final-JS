@@ -1,0 +1,7 @@
+[
+    {"id": 1, "idImagen":5,"nombre": "Camiseta retro Argentina. Temporada `86", "precio": 10000, "img":  "../Multimedia/CamisetasArgentina/Arg-86.webp", "img2": "../Multimedia/CamisetasArgentina/Maradona-86.wep"},
+    {"id": 2, "idImagen":6, "nombre": "Camiseta retro Argentina. Temporada `93", "precio": 9500, "img":    "../Multimedia/CamisetasArgentina/Arg-93.webp", "img2": "../Multimedia/CamisetasArgentina/Goyco-93.webp"},
+    {"id": 3, "idImagen":7, "nombre": "Camiseta retro Argentina. Temporada `94", "precio": 6300, "img":   "../Multimedia/CamisetasArgentina/Arg-94.webp", "img2": "../Multimedia/CamisetasArgentina/Maradona-94.webp"},
+    {"id": 4, "idImagen":8, "nombre": "Camiseta retro Argentina. Temporada `Sub 20", "precio": 6300, "img":  "../Multimedia/CamisetasArgentina/Arg-Sub20.webp", "img2": "../Multimedia/CamisetasArgentina/Roman-Sub20.webp"}
+    
+]

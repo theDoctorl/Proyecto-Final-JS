@@ -1,0 +1,56 @@
+body{
+  text-align: center;
+}
+.imagen-carousel{
+  height: 500px;
+
+}
+
+.padreitem {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "main aside";
+    
+  }
+  
+  .carrito{
+    grid-area: aside;
+  }
+  
+  .tarjetas{
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+}
+
+.tarjetasInicio{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+    .productosInicio{
+
+    }
+}
+
+
+#destacados{
+        display: inline-block;
+        position: relative;
+        margin: 20px;
+}
+
+#destacados::after, #destacados::before{
+    content: '' ; 
+    position: absolute;
+    width:500px ;
+    height: 3px;
+    background-color: black;
+    top: 1.4rem;
+}
+
+#destacados::before{
+    left: -510px;
+}
+#destacados::after{
+    right: -510px;
+}
