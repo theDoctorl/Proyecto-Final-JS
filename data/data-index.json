@@ -1,5 +1,5 @@
 [
-    {"id":1, "idImagen":4, "nombre":"Camiseta Retro Argentina Mundial `94", "precio": 5500,"img":"../Multimedia/CamisetasArgentina/ARG-94.webp", "img2":"../ProyectoFinal-JS/Multimedia/CamisetasArgentina/Maradona-94.webp"},
-    {"id":2, "idImagen":5, "nombre":"Camiseta Retro Boca Juniors. Temporada 92/93", "precio": 5000,"img":"../Multimedia/CamisetasBocaJRS/BOCAJRS-91.webp", "img2":"../ProyectoFinal-JS/Multimedia/CamisetasBocaJRS/Batistuta-91.webp"},
-    {"id":3, "idImagen":6, "nombre":"Camiseta Retro AC Milan. Temporada 93/94", "precio":5500,"img":"../Multimedia/CamisetasEuropa/MILAN93.webp", "img2":"../ProyectoFinal-JS/Multimedia/CamisetasEuropa/Baresi-93.webp"}
+    {"id":1, "idImagen":4, "nombre":"Camiseta Retro Argentina Mundial `94", "precio": 5500,"img":"../Multimedia/CamisetasArgentina/ARG-94.webp", "img2":"./Multimedia/CamisetasArgentina/Maradona-94.webp"},
+    {"id":2, "idImagen":5, "nombre":"Camiseta Retro Boca Juniors. Temporada 92/93", "precio": 5000,"img":"../Multimedia/CamisetasBocaJRS/BOCAJRS-91.webp", "img2":"./Multimedia/CamisetasBocaJRS/Batistuta-91.webp"},
+    {"id":3, "idImagen":6, "nombre":"Camiseta Retro AC Milan. Temporada 93/94", "precio":5500,"img":"../Multimedia/CamisetasEuropa/MILAN93.webp", "img2":"./Multimedia/CamisetasEuropa/Baresi-93.webp"}
 ]

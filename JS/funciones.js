@@ -23,6 +23,10 @@ function crearTarjetasBoca(){
                     padreItem.append(divCarrito);
                     document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
 
+                    //CambiarImagenes.
+                        document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
+                        document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};
+
                 
             })
             productosPrecio = productos
@@ -53,6 +57,10 @@ function crearTarjetasRiver(){
                                      padreItem.append(tarjetas)
                                      padreItem.append(divCarrito);
                                      document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
+
+                                     //CambiarImagenes.
+                                        document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
+                                        document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};
 
                                      
             })
@@ -85,6 +93,10 @@ function crearTarjetasArg(){
                                      padreItem.append(divCarrito);
                                      document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
 
+                                     //CambiarImagenes.
+                                        document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
+                                        document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};
+
                                      
             })
         
@@ -116,6 +128,10 @@ function crearTarjetasRestAmerica(){
                     padreItem.append(tarjetas)
                     padreItem.append(divCarrito);
                     document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
+
+                    //CambiarImagenes.
+                        document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
+                        document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};
 
                 
             })
@@ -150,6 +166,10 @@ function crearTarjetasRestEuropa(){
                     
                     document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
 
+                    //CambiarImagenes.
+                        document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
+                        document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};
+
                 
             })
         
@@ -178,11 +198,11 @@ function defaultIndex () {
                                      tarjetas.append(item);
                                      contenedorInicio.append(tarjetas)
                                     padreItem.innerHTML=("")
-
-
-                                     
                                      document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
 
+                                     //CambiarImagenes.
+                                        document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
+                                        document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};                                       
 
             })
     }).catch(error => console.log(error));
