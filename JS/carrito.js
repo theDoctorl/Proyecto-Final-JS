@@ -1,11 +1,11 @@
-// div del carrito
+// div del carrito.
 let divCarrito = document.createElement("div");
 divCarrito.className = "carrito";
 divCarrito.id = "carritos";
 padreItem.append(divCarrito);
 
 
-
+//Definicion del Array carrito y manejo del DOM para crearlo.
 let carrito = [];
 let productosPrecio;
 let seccionCarrito = document.getElementById("carritos");
@@ -33,15 +33,23 @@ let borrarCarrito = document.createElement("button");
 borrarCarrito.innerHTML = `<button type="button" id="borrarCarrito" class="btn btn-warning">Vaciar Carrito</button>`;
 cantidadProductos.appendChild(borrarCarrito); 
 
+//Vaciar Carrito.
+document.getElementById("borrarCarrito").onclick = () =>{
+    carrito = [];
+    total = 0;
+    montoTotalCompra.innerText = "$" + total;
+    cantProducts.innerText = carrito.length;
+};
 
-// funciones del carrito
+
+
+// funciones del carrito.
 function agregarAlCarrito (id){
 
             carrito.push(productosPrecio.find(p=>p.id==id));
             localStorage.setItem("carrito", JSON.stringify(carrito));
             calcularTotalCarrito();
 };
-
 
 function calcularTotalCarrito() {
     let total = 0;
@@ -50,6 +58,4 @@ function calcularTotalCarrito() {
     }
     montoTotalCompra.innerText = "$" + total;
     cantProducts.innerText = carrito.length;
-}
-
-
+};

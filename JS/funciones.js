@@ -198,7 +198,7 @@ function defaultIndex () {
                                      tarjetas.append(item);
                                      contenedorInicio.append(tarjetas)
                                     padreItem.innerHTML=("")
-                                     document.getElementById(`${producto.id}`).onclick = () => agregarAlCarrito(`${producto.id}`);
+                                     document.getElementById(`${producto.id}`).onclick = () => crearTarjetasArg();
 
                                      //CambiarImagenes.
                                         document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
@@ -210,11 +210,12 @@ function defaultIndex () {
 
 
 // botonera
-let clickBoca = document.getElementById("escudoboca").addEventListener("click", crearTarjetasBoca)
-let clickArg = document.getElementById("escudoarg").addEventListener("click", crearTarjetasArg)
-let clickRiver = document.getElementById("escudoriver").addEventListener("click", crearTarjetasRiver)
-let clickAmerica = document.getElementById("escudoamerica").addEventListener("click", crearTarjetasRestAmerica)
-let clickEuropa = document.getElementById("escudoeuropa").addEventListener("click", crearTarjetasRestEuropa)
+let clickBoca = document.getElementById("escudoboca").addEventListener("click", crearTarjetasBoca);
+let clickArg = document.getElementById("escudoarg").addEventListener("click", crearTarjetasArg);
+let clickRiver = document.getElementById("escudoriver").addEventListener("click", crearTarjetasRiver);
+let clickAmerica = document.getElementById("escudoamerica").addEventListener("click", crearTarjetasRestAmerica);
+let clickEuropa = document.getElementById("escudoeuropa").addEventListener("click", crearTarjetasRestEuropa);
+let clickHome = document.getElementById("botonHome").addEventListener("click", defaultIndex);
 
 // condicional para cuando se apretan los distintos botones
 
@@ -225,10 +226,11 @@ if (clickBoca) {
 }else if (clickRiver){
     crearTarjetasRiver();
 }else if(clickAmerica){
-    crearTarjetasRestAmerica()
+    crearTarjetasRestAmerica();
 }else if(clickEuropa){
     crearTarjetasRestEuropa
+}else if(clickHome){
+    defaultIndex();
 }else{
     defaultIndex();
-    
 };

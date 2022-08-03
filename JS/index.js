@@ -55,14 +55,6 @@ padreItem.className = "padreitem";
 container.append(padreItem);
 
 
-/* div del carrito
-let divCarrito = document.createElement("div");
-divCarrito.className = "carrito";
-divCarrito.id = "carritos";
-divCarrito.innerHTML = ("")
-padreItem.append(divCarrito);
-*/
-
 // div que contiene cada tarjeta
 let tarjetas = document.createElement("div");
 tarjetas.className ="tarjetas";
