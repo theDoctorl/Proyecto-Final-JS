@@ -29,16 +29,51 @@ let cantProducts = document.createElement("h5");
 cantProducts.innerText = "0";
 cantidadProductos.appendChild(cantProducts); 
 
+let botonComprar = document.createElement("button");
+botonComprar.innerHTML = `<button type="button" id="botonComprar" class="btn btn-warning">Comprar</button>`;
+cantidadProductos.appendChild(botonComprar); 
+
 let borrarCarrito = document.createElement("button");
 borrarCarrito.innerHTML = `<button type="button" id="borrarCarrito" class="btn btn-warning">Vaciar Carrito</button>`;
 cantidadProductos.appendChild(borrarCarrito); 
 
+
+
+
+
+// boton de compra
+document.getElementById("botonComprar").onclick = () => {
+    
+
+};
+
+
+
+
 //Vaciar Carrito.
 document.getElementById("borrarCarrito").onclick = () =>{
-    carrito = [];
-    total = 0;
-    montoTotalCompra.innerText = "$" + total;
-    cantProducts.innerText = carrito.length;
+    Swal.fire({
+        title: 'Esta seguro?',
+        text: "Esta accion no se puede revertir!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Vaciar!'
+      }).then((result) => {
+        if (result.isConfirmed) {
+            carrito = [];
+            total = 0;
+            montoTotalCompra.innerText = "$" + total;
+            cantProducts.innerText = carrito.length;
+          Swal.fire(
+            'Vacio!',
+            'Se vacio el carrito de compras.',
+            'success'
+          )
+        }
+      })
+    
 };
 
 
@@ -46,6 +81,13 @@ document.getElementById("borrarCarrito").onclick = () =>{
 // funciones del carrito.
 function agregarAlCarrito (id){
 
+    Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Su producto se agrego al carrito!',
+        showConfirmButton: false,
+        timer: 600
+      })
             carrito.push(productosPrecio.find(p=>p.id==id));
             localStorage.setItem("carrito", JSON.stringify(carrito));
             calcularTotalCarrito();
@@ -58,4 +100,8 @@ function calcularTotalCarrito() {
     }
     montoTotalCompra.innerText = "$" + total;
     cantProducts.innerText = carrito.length;
+    
 };
+
+
+

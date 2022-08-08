@@ -27,9 +27,22 @@ body{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-    .productosInicio{
+   
+}
 
-    }
+.productos{
+      margin: 20px;
+      margin-left: 30px;
+      .card{
+        transition: transform .2s;
+      }
+      img{
+        width: 220px;
+        height: 270px;
+      }
+}
+.card:hover{
+  transform: scale(1.1);
 }
 
 

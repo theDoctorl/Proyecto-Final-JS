@@ -12,7 +12,7 @@ function crearTarjetasBoca(){
                 item.className = "productos"
                 item.innerHTML = `  
                                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                                    <a id="${producto.idImagen}" href="${producto.img2}"><img src="${producto.img}" class="card-img-top" alt="..."></a>
+                                    <a id="${producto.idImagen}" href="${producto.img2}" target="_blank"><img src="${producto.img}" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
@@ -47,7 +47,7 @@ function crearTarjetasRiver(){
                 item.className = "productos"
                 item.innerHTML = `  
                                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                                    <a id="${producto.idImagen}" href="${producto.img2}"><img src="${producto.img}" class="card-img-top" alt="..."></a>
+                                    <a id="${producto.idImagen}" href="${producto.img2}" target="_blank"><img src="${producto.img}" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
@@ -82,7 +82,7 @@ function crearTarjetasArg(){
                 item.className = "productos"
                 item.innerHTML = `  
                                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                                    <a id="${producto.idImagen}" href="${producto.img2}"><img src="${producto.img}" class="card-img-top" alt="..."></a>
+                                    <a id="${producto.idImagen}" href="${producto.img2}" target="_blank"><img src="${producto.img}" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
@@ -118,7 +118,7 @@ function crearTarjetasRestAmerica(){
                 item.className = "productos"
                 item.innerHTML = `  
                                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                                    <a id="${producto.idImagen}" href="${producto.img2}"><img src="${producto.img}" class="card-img-top" alt="..."></a>
+                                    <a id="${producto.idImagen}" href="${producto.img2}" target="_blank"><img src="${producto.img}" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
@@ -154,7 +154,7 @@ function crearTarjetasRestEuropa(){
                 item.className = "productos"
                 item.innerHTML = `  
                                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                                    <a id="${producto.idImagen}" href="${producto.img2}"><img src="${producto.img}" class="card-img-top" alt="..."></a>
+                                    <a id="${producto.idImagen}" href="${producto.img2}" target="_blank"><img src="${producto.img}" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
@@ -189,7 +189,7 @@ function defaultIndex () {
                 item.className = "productos"
                 item.innerHTML = `
                                     <div class="card shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
-                                    <a id="${producto.idImagen}" href="${producto.img2}"><img src="${producto.img}" class="card-img-top" alt="..."></a>
+                                    <a id="${producto.idImagen}" href="${producto.img2}" target="_blank"><img src="${producto.img}" class="card-img-top" alt="..."></a>
                                     <div class="card-body">
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
