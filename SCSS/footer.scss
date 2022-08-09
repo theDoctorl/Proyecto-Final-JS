@@ -1,8 +1,23 @@
 .mainfooter{
-    background-color: #eeffffb2;
+    background-color: #EBEBEB;
     .pieDePagina{
         .row{
             list-style-type: none;
         }
     }
+}
+
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align:left;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    .formulario{
+        text-align: center;
+    }
+}
+
+.redes{
+    text-align: right;
 }

@@ -1,4 +1,5 @@
 body{
+  background-color: #EBEBEB;
   text-align: center;
 }
 .imagen-carousel{
@@ -23,6 +24,17 @@ body{
     grid-template-columns: 1fr 1fr; 
 }
 
+.cartaCarrito{
+    margin: 70px;
+    display: flex;
+    flex-direction: column;
+    .botoneraCarrito{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+}
+
 .tarjetasInicio{
   display: flex;
   flex-direction: row;
@@ -34,6 +46,7 @@ body{
       margin: 20px;
       margin-left: 30px;
       .card{
+        font-family:Georgia, 'Times New Roman', Times, serif;
         transition: transform .2s;
       }
       img{

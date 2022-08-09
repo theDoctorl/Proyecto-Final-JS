@@ -1,6 +1,7 @@
 [
-    {"id": 1, "idImagen":5, "nombre": "Camiseta retro Boca Juniors. Temporada `00", "precio": 7000, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS-00.png", "img2": "../Multimedia/CamisetasBocaJRS/riquelme-00.png"},
-    {"id": 2, "idImagen":6, "nombre": "Camiseta retro Boca Juniors. Temporada `03", "precio": 4500, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS-2003.webp", "img2": "../Multimedia/CamisetasBocaJRS/abondanzieri-2003.webp"},
-    {"id": 3, "idImagen":7, "nombre": "Camiseta retro Boca Juniors. Temporada `92", "precio": 6300, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS92.webp", "img2": "../Multimedia/CamisetasBocaJRS/M.Martinez-92.webp"},
-    {"id": 4, "idImagen":8, "nombre": "Camiseta retro Boca Juniors. Temporada `81", "precio": 9000, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS-81.webp", "img2": "../Multimedia/CamisetasBocaJRS/Maradona-Boca-81.webp"}
+    {"id": 1, "idImagen":6, "nombre": "Camiseta retro Boca Juniors. Temporada `00", "precio": 7000, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS-00.png", "img2": "../Multimedia/CamisetasBocaJRS/riquelme-00.png"},
+    {"id": 2, "idImagen":7, "nombre": "Camiseta retro Boca Juniors. Temporada `03", "precio": 4500, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS-2003.webp", "img2": "../Multimedia/CamisetasBocaJRS/abondanzieri-2003.webp"},
+    {"id": 3, "idImagen":8, "nombre": "Camiseta retro Boca Juniors. Temporada `92", "precio": 6300, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS92.webp", "img2": "../Multimedia/CamisetasBocaJRS/M.Martinez-92.webp"},
+    {"id": 4, "idImagen":9, "nombre": "Camiseta retro Boca Juniors. Temporada `93", "precio": 7300, "img": "../Multimedia/CamisetasBocaJRS/BOCAJRS-91.webp", "img2": "../Multimedia/CamisetasBocaJRS/Batistuta-91.webp"},
+    {"id": 5, "idImagen":10, "nombre": "Camiseta retro Boca Juniors. Temporada `81", "precio": 9000, "img": "../Multimedia/CamisetasBocaJRS/BocaJRS-81.webp", "img2": "../Multimedia/CamisetasBocaJRS/Maradona-Boca-81.webp"}
 ]

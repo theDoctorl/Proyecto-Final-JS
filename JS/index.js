@@ -38,9 +38,6 @@ inicio.innerHTML = `<div id="carouselExampleIndicators" class="carousel slide" d
 container.append(inicio);
 
 
-
-
-
 let contenedorInicio = document.createElement("div");
 contenedorInicio.className = "contenedorInicio";
 container.append(contenedorInicio);

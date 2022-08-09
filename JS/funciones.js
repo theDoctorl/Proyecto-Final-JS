@@ -32,7 +32,7 @@ function crearTarjetasBoca(){
             productosPrecio = productos
         
         
-    }).catch(error => console.log(error));
+    }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
 function crearTarjetasRiver(){
     inicio.innerHTML = ("");
@@ -67,7 +67,7 @@ function crearTarjetasRiver(){
             productosPrecio = productos
         
         
-    }).catch(error => console.log(error));
+    }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
 function crearTarjetasArg(){
     inicio.innerHTML = ("");
@@ -102,7 +102,7 @@ function crearTarjetasArg(){
         
             productosPrecio = productos
         
-    }).catch(error => console.log(error));
+    }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
     
 function crearTarjetasRestAmerica(){
@@ -138,7 +138,7 @@ function crearTarjetasRestAmerica(){
         
             productosPrecio = productos
         
-    }).catch(error => console.log(error));
+    }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
 
 function crearTarjetasRestEuropa(){
@@ -175,7 +175,7 @@ function crearTarjetasRestEuropa(){
         
             productosPrecio = productos
         
-    }).catch(error => console.log(error));
+    }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
 
 function defaultIndex () {
@@ -198,14 +198,20 @@ function defaultIndex () {
                                      tarjetas.append(item);
                                      contenedorInicio.append(tarjetas)
                                     padreItem.innerHTML=("")
-                                     document.getElementById(`${producto.id}`).onclick = () => crearTarjetasArg();
+                                     document.getElementById(`${producto.id}`).onclick = () => {
+                                            if(producto.id===1){crearTarjetasArg()
+                                            }else if(producto.id===2){crearTarjetasBoca()
+                                            }else if(producto.id===3){
+                                                crearTarjetasRestEuropa()
+                                            }else{crearTarjetasArg()}
+                                     };
 
                                      //CambiarImagenes.
                                         document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
                                         document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};                                       
 
             })
-    }).catch(error => console.log(error));
+    }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
 
 
