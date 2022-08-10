@@ -45,35 +45,24 @@ borrarCarrito.innerHTML = `<button type="button" id="borrarCarrito" class="btn b
 botonesCarrito.appendChild(borrarCarrito); 
 
 
+// boton de compra, integrando STRIPE como pasarela de pagos.
+let stripe = Stripe("pk_test_51LV0pmFso8aZRLtvcEZ6ELXUxlehARPsL4Cxqs8PHLtLIymsZeqwmEpOr0TyQoFvCGirSThgzjSBiEhwaAuUZOjm00iFT9OF6w");
 
-
-
-// boton de compra
 document.getElementById("botonComprar").onclick = () => {
-  Swal.fire({
-    title: 'Pasar a finalizar la compra?',
-    text: `Puede pagar en cuotas sin interes!`,
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Finalizar compra!'
-  }).then((result) => {
-    if (result.isConfirmed) {
-        carrito = [];
-        total = 0;
-        montoTotalCompra.innerText = "$" + total;
-        cantProducts.innerText = carrito.length;
-      Swal.fire(
-        'Muchas gracias!',
-        'Te redireccionaremos a la pasarela de pagos.',
-        'success'
-      )
-    }
-  })
-
+  stripe.redirectToCheckout({
+    lineItems: [
+        {
+            price: "price_1LV15kFso8aZRLtvjlOPVt4I",
+            quantity: 1,
+        },
+    ],
+    mode: "subscription",
+    successUrl: "http://127.0.0.1:5500/Proyecto-Final-JS/pages/cancel.html",
+    cancelUrl: "http://127.0.0.1:5500/Proyecto-Final-JS/pages/cancel.html",
+}).then(function(result){
+    alert(result);
+});  
 };
-
 
 
 
@@ -132,3 +121,29 @@ function calcularTotalCarrito() {
 
 
 
+/* boton de compra
+document.getElementById("botonComprar").onclick = () => {
+  Swal.fire({
+    title: 'Pasar a finalizar la compra?',
+    text: `Puede pagar en cuotas sin interes!`,
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Finalizar compra!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+        carrito = [];
+        total = 0;
+        montoTotalCompra.innerText = "$" + total;
+        cantProducts.innerText = carrito.length;
+      Swal.fire(
+        'Muchas gracias!',
+        'Te redireccionaremos a la pasarela de pagos.',
+        'success'
+      )
+    }
+  })
+
+};
+*/
