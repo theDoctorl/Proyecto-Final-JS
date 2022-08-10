@@ -221,8 +221,7 @@ let clickArg = document.getElementById("escudoarg").addEventListener("click", cr
 let clickRiver = document.getElementById("escudoriver").addEventListener("click", crearTarjetasRiver);
 let clickAmerica = document.getElementById("escudoamerica").addEventListener("click", crearTarjetasRestAmerica);
 let clickEuropa = document.getElementById("escudoeuropa").addEventListener("click", crearTarjetasRestEuropa);
-let clickHome = document.getElementById("botonHome").addEventListener("click", defaultIndex);
-
+let clickHome = document.getElementById("botonHome");
 // condicional para cuando se apretan los distintos botones
 
 if (clickBoca) {

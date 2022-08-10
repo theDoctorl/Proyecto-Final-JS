@@ -57,8 +57,8 @@ document.getElementById("botonComprar").onclick = () => {
         },
     ],
     mode: "subscription",
-    successUrl: "http://127.0.0.1:5500/Proyecto-Final-JS/pages/cancel.html",
-    cancelUrl: "http://127.0.0.1:5500/Proyecto-Final-JS/pages/cancel.html",
+    successUrl: "https://www.linkedin.com/in/federico-leiva-2466641a9/",
+    cancelUrl: "http://127.0.0.1:5500/index.html",
 }).then(function(result){
     alert(result);
 });  
@@ -78,6 +78,7 @@ document.getElementById("borrarCarrito").onclick = () =>{
         confirmButtonText: 'Si, Vaciar!'
       }).then((result) => {
         if (result.isConfirmed) {
+            localStorage.clear();
             carrito = [];
             total = 0;
             montoTotalCompra.innerText = "$" + total;
@@ -118,32 +119,3 @@ function calcularTotalCarrito() {
     cantProducts.innerText = carrito.length;
     
 };
-
-
-
-/* boton de compra
-document.getElementById("botonComprar").onclick = () => {
-  Swal.fire({
-    title: 'Pasar a finalizar la compra?',
-    text: `Puede pagar en cuotas sin interes!`,
-    icon: 'warning',
-    showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
-    confirmButtonText: 'Finalizar compra!'
-  }).then((result) => {
-    if (result.isConfirmed) {
-        carrito = [];
-        total = 0;
-        montoTotalCompra.innerText = "$" + total;
-        cantProducts.innerText = carrito.length;
-      Swal.fire(
-        'Muchas gracias!',
-        'Te redireccionaremos a la pasarela de pagos.',
-        'success'
-      )
-    }
-  })
-
-};
-*/
