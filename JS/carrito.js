@@ -32,6 +32,11 @@ cantProducts.className = "card-text"
 cantProducts.innerText = "0";
 cantidadProductos.appendChild(cantProducts); 
 
+let listaProductos = document.createElement("ul");
+listaProductos.className = "listaProductos";
+cantidadProductos.appendChild(listaProductos);
+
+
 let botonesCarrito = document.createElement("div");
 botonesCarrito.className = "botoneraCarrito";
 cantidadProductos.appendChild(botonesCarrito);
@@ -43,6 +48,14 @@ botonesCarrito.appendChild(botonComprar);
 let borrarCarrito = document.createElement("div");
 borrarCarrito.innerHTML = `<button type="button" id="borrarCarrito" class="btn btn-warning">Vaciar Carrito</button>`;
 botonesCarrito.appendChild(borrarCarrito); 
+
+
+
+
+
+
+
+
 
 
 // boton de compra, integrando STRIPE como pasarela de pagos.
@@ -83,6 +96,7 @@ document.getElementById("borrarCarrito").onclick = () =>{
             total = 0;
             montoTotalCompra.innerText = "$" + total;
             cantProducts.innerText = carrito.length;
+            listaProductos.innerHTML = "";
           Swal.fire(
             'Vacio!',
             'Se vacio el carrito de compras.',
@@ -90,7 +104,6 @@ document.getElementById("borrarCarrito").onclick = () =>{
           )
         }
       })
-    
 };
 
 
@@ -108,6 +121,8 @@ function agregarAlCarrito (id){
             carrito.push(productosPrecio.find(p=>p.id==id));
             localStorage.setItem("carrito", JSON.stringify(carrito));
             calcularTotalCarrito();
+
+            
 };
 
 function calcularTotalCarrito() {
@@ -117,5 +132,10 @@ function calcularTotalCarrito() {
     }
     montoTotalCompra.innerText = "$" + total;
     cantProducts.innerText = carrito.length;
+    let descripcionProductos = document.createElement("li");
+        listaProductos.appendChild(descripcionProductos);
+    for (const lista of carrito) {
+      descripcionProductos.innerHTML = `<li>${lista.nombre}</li>`;
+      };
     
 };
