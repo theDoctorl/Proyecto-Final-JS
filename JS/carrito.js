@@ -6,7 +6,7 @@ padreItem.append(divCarrito);
 
 
 //Definicion del Array carrito y manejo del DOM para crearlo.
-let carrito = [];
+let carritoEnLs = [];
 let productosPrecio;
 let seccionCarrito = document.getElementById("carritos");
 
@@ -29,7 +29,7 @@ totalCompra.appendChild(cantidadProductos);
 
 let cantProducts = document.createElement("h5");
 cantProducts.className = "card-text"
-cantProducts.innerText = "0";
+cantProducts.innerText = "";
 cantidadProductos.appendChild(cantProducts); 
 
 let listaProductos = document.createElement("ul");
@@ -79,6 +79,7 @@ document.getElementById("botonComprar").onclick = () => {
 
 
 
+
 //Vaciar Carrito.
 document.getElementById("borrarCarrito").onclick = () =>{
     Swal.fire({
@@ -92,10 +93,11 @@ document.getElementById("borrarCarrito").onclick = () =>{
       }).then((result) => {
         if (result.isConfirmed) {
             localStorage.clear();
-            carrito = [];
+            traerStorage = [];
+            carritoEnLs = [];
             total = 0;
             montoTotalCompra.innerText = "$" + total;
-            cantProducts.innerText = carrito.length;
+            cantProducts.innerText = carritoEnLs.length;
             listaProductos.innerHTML = "";
           Swal.fire(
             'Vacio!',
@@ -106,36 +108,70 @@ document.getElementById("borrarCarrito").onclick = () =>{
       })
 };
 
-
-
+const guardarLocal = (clave, valor) => {localStorage.setItem(clave, valor)};
+let traerStorage;
 // funciones del carrito.
+
 function agregarAlCarrito (id){
+  Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Su producto se agrego al carrito!',
+    showConfirmButton: false,
+    timer: 600
+  })
 
-    Swal.fire({
-        position: 'top-end',
-        icon: 'success',
-        title: 'Su producto se agrego al carrito!',
-        showConfirmButton: false,
-        timer: 600
-      })
-            carrito.push(productosPrecio.find(p=>p.id==id));
-            localStorage.setItem("carrito", JSON.stringify(carrito));
-            calcularTotalCarrito();
+  if (traerStorage) {
+    carritoEnLs = traerStorage;
+    };
 
-            
+      carritoEnLs.push(productosPrecio.find(p=>p.id==id));
+      guardarLocal("carrito", JSON.stringify(carritoEnLs));
+      traerStorage=JSON.parse(localStorage.getItem("carrito"))
+
+      calcularCarrito()
 };
+      
 
-function calcularTotalCarrito() {
-    let total = 0;
-    for (const productosPrecio of carrito) {
-        total+=productosPrecio.precio;
-    }
-    montoTotalCompra.innerText = "$" + total;
-    cantProducts.innerText = carrito.length;
-    let descripcionProductos = document.createElement("li");
-        listaProductos.appendChild(descripcionProductos);
-    for (const lista of carrito) {
-      descripcionProductos.innerHTML = `<li>${lista.nombre}</li>`;
-      };
+
+      function calcularCarrito(){
+        let total = 0;
+
+        for (const iterator of carritoEnLs) {
+            total+=iterator.precio;
+        }
+      
+        montoTotalCompra.innerText = "$" + total;
+        cantProducts.innerText = carritoEnLs.length;
+        let descripcionProductos = document.createElement("li");
+            listaProductos.appendChild(descripcionProductos);
+        for (const lista of carritoEnLs) {
+          descripcionProductos.innerHTML = `<li>${lista.nombre}</li>`;
+          };
+          
+
+
+
+        };
+          function recuperarCarrito (){
+            if (traerStorage) {
+              carritoEnLs = traerStorage;
+              };
+            traerStorage=JSON.parse(localStorage.getItem("carrito"))
+            let total = 0
     
-};
+            for (const iterator of carritoEnLs) {
+                total+=iterator.precio;
+            }
+    
+            montoTotalCompra.innerText = "$" + total;
+            cantProducts.innerText = carritoEnLs.length;
+            let descripcionProductos = document.createElement("li");
+                listaProductos.appendChild(descripcionProductos);
+            for (const lista of carritoEnLs) {
+              descripcionProductos.innerHTML = `<li>${lista.nombre}</li>`;
+              };
+          }
+          recuperarCarrito();
+            
+        

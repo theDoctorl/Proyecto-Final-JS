@@ -194,23 +194,26 @@ function defaultIndex () {
                                      <h5 class="card-title">$${producto.precio}</h5>
                                      <p class="card-text">${producto.nombre}</p>
                                      <button type="button" id="${producto.id}" class="btn btn-warning">Ver Catalogo</button>`;
-        
+                                     
+
                                      tarjetas.append(item);
                                      contenedorInicio.append(tarjetas)
                                     padreItem.innerHTML=("")
                                      document.getElementById(`${producto.id}`).onclick = () => {
-                                            if(producto.id===1){crearTarjetasArg()
-                                            }else if(producto.id===2){crearTarjetasBoca()
+                                            if(producto.id===1){
+                                                crearTarjetasArg();
+                                                recuperarCarrito ();
+                                            }else if(producto.id===2){crearTarjetasBoca();recuperarCarrito ();
                                             }else if(producto.id===3){
-                                                crearTarjetasRestEuropa()
+                                                crearTarjetasRestEuropa();recuperarCarrito ();
                                             }else{crearTarjetasArg()}
                                      };
-
                                      //CambiarImagenes.
                                         document.getElementById(`${producto.idImagen}`).onmousemove = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img2}" class="card-img-top" alt="...">`};
                                         document.getElementById(`${producto.idImagen}`).onmouseout = () =>{document.getElementById(`${producto.idImagen}`).innerHTML = `<img src="${producto.img}" class="card-img-top" alt="...">`};                                       
 
             })
+            productosPrecio = productos
     }).catch(error => alert(`${error} No se pudo descargar la informacion. `));
 };
 
